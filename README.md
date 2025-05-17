@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+# Personal Finance Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive application for tracking personal finances, enabling users to monitor and analyze their income and expenses with categorization and filtering options.
 
-Currently, two official plugins are available:
+![App Screenshot](./screenshot.png) *(Note: Add actual screenshot later)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Transaction Management**
+    - Add income and expense transactions
+    - View all transactions in a clean table layout
+    - Delete transactions as needed
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Detailed Categorization**
+    - Default categories provided (Salary, Food, Transport, etc.)
+    - Create custom categories for income and expenses
+    - Categories persist between sessions
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Advanced Filtering**
+    - Filter by transaction type (income/expense/all)
+    - Filter by specific category
+    - Filter by date range
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Visual Analytics**
+    - Income vs. expense doughnut chart
+    - Monthly overview bar chart
+    - Summary cards showing totals
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Data Export**
+    - Export all transactions to CSV format
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Technologies Used
+
+- React.js with TypeScript
+- Tailwind CSS for styling
+- date-fns for date handling
+- Chart.js for data visualization
+- React Icons for icon set
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/personal-finance-tracker.git

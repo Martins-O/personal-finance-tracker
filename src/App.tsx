@@ -38,13 +38,17 @@ function App() {
         setTransactions([...transactions, newTransaction]);
     };
 
-    const addCategory = (category: Omit<Category, 'id'>) => {
+    // Update the addCategory function to:
+    // In App.tsx
+    const addCategory = async (category: Omit<Category, 'id'>) => {
         const newCategory = {
             ...category,
             id: Date.now().toString(),
         };
         setCategories([...categories, newCategory]);
+        return newCategory;
     };
+
 
     const deleteTransaction = (id: string) => {
         setTransactions(transactions.filter(t => t.id !== id));
