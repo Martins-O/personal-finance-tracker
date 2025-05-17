@@ -42,3 +42,54 @@ A comprehensive application for tracking personal finances, enabling users to mo
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/personal-finance-tracker.git
+
+2. Install dependencies:
+    ```bash
+   npm install
+
+3. Run the development server:
+    ```bash
+   npm run dev
+
+4. Open your browser and visit:
+    ```
+   http://localhost:5173
+
+## Usage Guide
+
+- **Adding Transactions**
+  - Select transaction type (Income/Expense)
+  - Enter the amount 
+  - Select a date (defaults to today)
+  - Choose or create a category
+  - (Optional) Add notes 
+  - Click "Add Transaction"
+  
+
+
+- **Managing Categories**
+  - Click "+ Add Category" in the transaction form 
+  - Enter a category name 
+  - Select category type (Income/Expense)
+  - Click "Add Category"
+
+
+- **Filtering Transactions**
+  - Click the "Filter" button above the transactions list 
+  - Set your filters:
+    - Type (Income/Expense/All)
+    - Specific category 
+    - Date range 
+  - Click "Apply Filters"
+
+- **Exporting Data**
+  - Click "Export to CSV" button 
+  - A CSV file will download automatically
+
+## Data Persistence
+
+All your transactions and categories are automatically saved in your browser's localStorage. This means:
+
+- Your data persists between sessions
+- No need to manually save
+- Data is specific to your browser/device
